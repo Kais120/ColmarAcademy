@@ -161,26 +161,26 @@ header {
 
 #start-learning-main {
     background-color:  rgb(196, 190, 190);
-    padding: 32px;
+    padding: 32px 72px;
 }
 
 #start-learning-main > h1 {
     text-align: center;    
     font-size: 1.5rem;
-    
+    margin-bottom: 32px;    
 }
 
 #start-learning {    
     display: grid;    
     grid-template: 1fr 1fr / 1fr 1fr 1fr;  
+    gap: 32px;
     align-items: flex-start;
     justify-content: space-between; 
 }
 
 #start-learning section {   
     background-color: white;
-    height: calc(100% - 32px);
-    margin: 16px;
+    height: 100%;    
 }
 
 #start-learning section article {
@@ -453,7 +453,7 @@ a {
         padding: 16px 16px 24px 16px;
         background-color:  rgb(216, 205, 205);
         margin: 8px 0;
-        vertical-align: text-bottom;
+        vertical-align: middle;
     }
 
     #start-learning > section > article, #start-learning > section > article > h1 {
@@ -505,7 +505,7 @@ a {
     /*footer*/
 
     footer {
-        padding: 16px 0;
+        padding: 16px 16px;
     }
 }
 
