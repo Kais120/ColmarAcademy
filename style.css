@@ -5,6 +5,9 @@
     font-size: 16px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    --text-color-dark-brown:  rgb(61, 55, 55); 
+    --bg-color-light-brown:   rgb(196, 190, 190); 
+    color: var (--text-color-dark-brown);
 }
 
 nav {    
@@ -45,15 +48,17 @@ nav li {
     list-style: none;
 }
 
+#nav-icons {
+    display: none;
+}
+
 #colmar-logo-text{
-    
     text-transform: uppercase;    
 }
 
 header {
-    background-color:  rgb(196, 190, 190);
-    color: rgb(61, 55, 55);  
-    padding: 32px 24px;   
+    background-color:  rgb(196, 190, 190);    
+    padding: 32px 0 32px 24px;    
     display: flex;
     flex-flow: row wrap;  
     justify-content: flex-start;
@@ -62,18 +67,19 @@ header {
 
 
 #header-figure {
-   width: 60%;    
+   width: 60%;  
+   margin-right: 24px;  
 }
 
-#learning-start{          
-    margin-left: 24px;
-    width: 30%;
+#learning-start{         
+    width: calc(40% - 24px);
+    padding: 0 36px 0 24px;
     box-sizing: border-box;
 }
 
 
 #learning-start h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -88,7 +94,7 @@ header {
     background-color: rgb(61, 55, 55);
     color: white;
     padding: 8px 0;
-    width: 100%;
+    width: 70%;
 }
 
 /*main*/
@@ -98,16 +104,17 @@ header {
     display: flex;
     flex-flow: row wrap;  
     align-content: stretch;  
-    padding: 32px 24px;
-    
+    padding: 32px 0 32px 24px;   
 }
 
 #main-article {
-    width: 60%;
+    width: 60%;    
+    margin-right: 24px;  
 }
    
 
 #main-article h1 {
+    font-size: 1.5rem;
     margin-top: 32px;    
 }
 
@@ -116,8 +123,7 @@ header {
 }
 
 #side-links {    
-    width: 30%;
-    margin-left: 24px;    
+    width: calc(40% - 24px);    
 }
 
 #side-links .link {   
@@ -160,21 +166,21 @@ header {
 
 #start-learning-main > h1 {
     text-align: center;    
-    font-size: 2rem;
+    font-size: 1.5rem;
     
 }
 
 #start-learning {    
-    display: flex;
-    flex-flow: row wrap;     
-    justify-content: center; 
+    display: grid;    
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;  
+    align-items: flex-start;
+    justify-content: space-between; 
 }
 
 #start-learning section {   
-    width: 20%;
-    margin: 32px;
     background-color: white;
-      
+    height: calc(100% - 32px);
+    margin: 16px;
 }
 
 #start-learning section article {
@@ -190,12 +196,12 @@ header {
 /* Thesis */
 
 #thesis {
-    padding: 32px 24px;
+    padding: 32px 0 32px 24px;
 }
 
 #thesis > h1{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 #thesis-flexbox {
@@ -205,35 +211,75 @@ header {
     align-items: flex-start;
 }
 
+
 #thesis-video {
     width: 60%;    
     margin-right: 24px;
 }
 
+#thesis-video h1 {
+    font-size: 1.5rem;
+    margin-top: 24px;
+}
+
+#thesis-video p {    
+    margin-top: 8px;
+}
+
 #thesis-items {
-    width: 30%;       
+    width: calc(40% - 24px);  
+    display: grid; 
+    grid-template: 1fr 1fr / 1fr ;    
+    padding-right: 24px;
+}
+
+#thesis-items section:nth-child(2n-1) {
+    background-color: var(--bg-color-light-brown);
+}
+
+#thesis-items section {
+    width: 100%;
+    padding: 16px 0 16px 16px;
+    display: flex;    
+    flex-flow: row wrap;
+    align-items: center;
 }
 
 #thesis-items figure {
     width: 35%;   
+    height: auto;
 }
 #thesis-items article {
-    width: 65%;   
+    width: calc(65% - 16px);  
+    margin-left: 16px;
+    height: auto; 
+}
+
+#thesis-items h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 /*footer */
 
 footer {
     width: 100%;
-    margin: 0 24px;
+    padding: 16px 24px 24px;
+    display: flex;
+    flex-flow: row wrap;  
+    justify-content: space-between;  
+    align-content: center;    
+    align-items: center;
 }
 
-footer p {
-    
-}
 
 footer ul{
-    list-style: none;
+    list-style: none;   
+    float: right;
+}
+
+footer li {
+    display: inline-block;
     vertical-align: middle;
 }
 
@@ -246,3 +292,220 @@ img {
     width: 100%;
     height: auto;
 }
+
+.mobile-img {
+    display: none;
+}
+
+a {
+    color: blue;
+}
+
+@media only screen and (max-width: 700px){
+    #thesis-items h1 {
+        font-size: 1rem;
+    }
+
+    /*nav*/
+
+    #nav-links {
+        display:none;
+    }
+
+    #nav-icons {
+        display: inline-block;
+    }
+
+    nav {
+        padding: 0 2em;
+    }
+
+    #nav-icons li:not(:first-child) {
+        margin-left: 24px;
+     }
+
+    #colmar-logo {
+        display:none;
+    }
+
+    /*header*/
+
+    header {
+        flex-flow: column wrap;
+        justify-items: stretch;
+        margin: 0;  
+        padding: 0;
+    }
+
+    #header-figure {
+        width: 100%;  
+        margin: 0;  
+        padding: 0;
+     }
+
+     #learning-start{                 
+        padding: 32px 16px;
+        box-sizing: border-box;
+        width: 100%;
+
+    }
+
+    
+    #learning-start h1 {
+        font-size: 1.5rem;
+        margin: 32px 0 0 0;
+    }
+    
+    #learning-start p {
+        font-size: 1rem;
+        margin: 32px 0 24px 0;
+    }
+    
+    #learning-start button{
+        border-radius: 0;
+        border: none;
+        background-color: rgb(138, 128, 128);
+        color: white;
+        width: 100%;
+        padding: 8px 0;        
+    }
+
+    /*main article*/
+
+    #main-article {
+        display: none;
+    }
+
+    #school-info {
+        display: block;  
+        padding: 16px 16px 0 16px;  
+            
+    }
+
+    #side-links {    
+        width: 100%;    
+    }
+
+    #side-links .link {          
+        display: flex;
+        align-items: center;
+        padding: 0;
+        flex-flow: column wrap;
+        padding-bottom: 32px;
+    } 
+
+    #side-links .link:not(:first-child) {
+        padding-top: 32px;
+    }
+
+    #side-links .link figure {
+        width: 100%;
+        height: auto;
+    }
+
+    #side-links .link section {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .link figure {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+ 
+  
+    #side-links .link:last-child {
+        background-color:white;
+    }
+
+    .mobile-img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    /*start learning*/
+
+    #start-learning-main {
+        border-top: 1px solid rgb(73, 73, 73);
+        background-color:  white;
+    }
+
+    #start-learning-main h1 {
+        margin-bottom: 16px;
+    }
+
+    #start-learning {
+        grid-auto-flow: row ;
+        grid-template: repeat(6, 1fr) / 1fr; 
+        align-items: center; 
+        row-gap: 5px;
+    }
+
+    #start-learning section {
+        /*margin: 8px 0;*/
+        height: 100%;        
+        padding: 16px 16px 24px 16px;
+        background-color:  rgb(216, 205, 205);
+        margin: 8px 0;
+        vertical-align: text-bottom;
+    }
+
+    #start-learning > section > article, #start-learning > section > article > h1 {
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+    }
+    #start-learning section article p,
+    #start-learning section article h2,
+    #start-learning section figure {
+        display: none;
+    }
+
+    /*thesis*/
+
+    #thesis {
+        border-top: 1px solid rgb(73, 73, 73);
+        padding: 32px 0 24px 0;
+        width: 100%;
+        margin: 0;        
+    }
+
+    #thesis-flexbox {
+        margin-top: 16px;
+        display: block;    
+    }
+
+    #thesis-video {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #thesis-video :not(video) {
+        display: none;
+    }
+
+    #thesis-video video {
+        margin: 0;
+        padding: 0;
+        object-fit: fill;
+        width: 100%;
+    }
+
+    #thesis-items {
+        display: none;
+    }
+
+    /*footer*/
+
+    footer {
+        padding: 16px 0;
+    }
+}
+
