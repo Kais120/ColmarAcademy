@@ -1,17 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+   /* width: 100%;   */
     font-size: 16px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
-    position: fixed;
+nav {    
     width: 100%;       
     height: 64px;
-    padding: 0 24px;
-    top: 0;
+    padding: 0 24px;   
     display: flex;
     flex-flow: row wrap;  
     justify-content: space-between;  
@@ -36,9 +35,10 @@ nav figure {
     vertical-align: middle;
 }
 
-#nav-links li:not(:first-child):not(:last-child) {
-   margin: 0 16px
+#nav-links li:not(:first-child) {
+   margin-left: 16px;
 }
+
 
 nav li {
     display: inline-block;
@@ -50,52 +50,199 @@ nav li {
     text-transform: uppercase;    
 }
 
-main {
-    position: relative;
-    top: 64px;
-}
-
 header {
-    background-color:  lightgrey;
-    max-width: 100%;
-    position: relative;
-    top: 64px;
+    background-color:  rgb(196, 190, 190);
+    color: rgb(61, 55, 55);  
     padding: 32px 24px;   
     display: flex;
-    flex-flow: row wrap;      
-    align-content: center;    
+    flex-flow: row wrap;  
+    justify-content: flex-start;
     align-items: center;
 }
 
 
 #header-figure {
-    max-width: 60%;    
+   width: 60%;    
 }
 
-#header-figure img {
-    max-width: 100%;
-}
-
-#learning-start{      
+#learning-start{          
     margin-left: 24px;
+    width: 30%;
+    box-sizing: border-box;
 }
 
-#learning-start article{
-    width: 70%;
-    margin-left: 24px;
-}
-
-/*
-#learning-start *{   
-    width: 100%;
-    
-}*/
-
-#learning-start *{
-    margin-bottom: 2rem;
-    color: rgb(77, 74, 74);
-}
 
 #learning-start h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#learning-start p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#learning-start button{
+    border-radius: 0;
+    border: none;
+    background-color: rgb(61, 55, 55);
+    color: white;
+    padding: 8px 0;
+    width: 100%;
+}
+
+/*main*/
+
+/*  */
+#school-info {
+    display: flex;
+    flex-flow: row wrap;  
+    align-content: stretch;  
+    padding: 32px 24px;
+    
+}
+
+#main-article {
+    width: 60%;
+}
+   
+
+#main-article h1 {
+    margin-top: 32px;    
+}
+
+#main-article p {
+    margin-top: 32px;    
+}
+
+#side-links {    
+    width: 30%;
+    margin-left: 24px;    
+}
+
+#side-links .link {   
+    display: flex;
+    align-items: center;
+    padding: 16px;
+} 
+
+#side-links .link:first-child{
+    padding-top: 0;
+} 
+
+
+#side-links .link figure {    
+    width: 35%;
+    height: auto;
+}
+
+#side-links .link section {    
+    width: 65%;
+    height: auto;
+    margin-left: 16px;
+}
+
+
+#side-links .link h1, #side-links .link p{
+    margin-bottom: 8px;
+}
+
+#side-links .link:last-child {
+    background-color:  rgb(196, 190, 190);
+}
+
+/* start learning */
+
+#start-learning-main {
+    background-color:  rgb(196, 190, 190);
+    padding: 32px;
+}
+
+#start-learning-main > h1 {
+    text-align: center;    
     font-size: 2rem;
+    
+}
+
+#start-learning {    
+    display: flex;
+    flex-flow: row wrap;     
+    justify-content: center; 
+}
+
+#start-learning section {   
+    width: 20%;
+    margin: 32px;
+    background-color: white;
+      
+}
+
+#start-learning section article {
+    padding: 16px 16px 24px 16px;
+}
+
+#start-learning section article h2 {
+    text-transform: capitalize;
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+/* Thesis */
+
+#thesis {
+    padding: 32px 24px;
+}
+
+#thesis > h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#thesis-flexbox {
+    display: flex;
+    margin-top: 32px;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+#thesis-video {
+    width: 60%;    
+    margin-right: 24px;
+}
+
+#thesis-items {
+    width: 30%;       
+}
+
+#thesis-items figure {
+    width: 35%;   
+}
+#thesis-items article {
+    width: 65%;   
+}
+
+/*footer */
+
+footer {
+    width: 100%;
+    margin: 0 24px;
+}
+
+footer p {
+    
+}
+
+footer ul{
+    list-style: none;
+    vertical-align: middle;
+}
+
+video {
+    width: 100%;
+    height: auto;    
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
