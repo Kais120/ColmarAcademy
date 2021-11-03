@@ -452,14 +452,24 @@ a {
         height: 100%;        
         padding: 16px 16px 24px 16px;
         background-color:  rgb(216, 205, 205);
-        margin: 8px 0;
-        vertical-align: middle;
+        margin: 8px 0;        
     }
 
-    #start-learning > section > article, #start-learning > section > article > h1 {
-        margin: 0;
-        padding: 0;
+    #start-learning section {
+        display: table;
+        padding: 16px 16px 24px 16px;
+    }
+
+    #start-learning section article {
+        display: table-cell;
         vertical-align: middle;
+        padding: 0;
+    }
+
+
+    #start-learning > section > article > h1 {
+        margin: 0;
+        padding: 0;       
     }
     #start-learning section article p,
     #start-learning section article h2,
