@@ -7,7 +7,7 @@
     font-family: Arial, Helvetica, sans-serif;
     --text-color-dark-brown:  rgb(61, 55, 55); 
     --bg-color-light-brown:   rgb(196, 190, 190); 
-    color: var (--text-color-dark-brown);
+    color: var(--text-color-dark-brown);
 }
 
 nav {    
